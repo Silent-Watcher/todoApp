@@ -1,13 +1,19 @@
 doctype html
-html(lang="en")
+html(lang="en").light
     include include/_head
     include include/_body
         .container-fluid 
-            .container 
+            .container#intro_page
                 .row 
-                    section#heading_section.col-12 
-                        h1 Welcome to ToDo.js 
-                        lottie-player(src='https://assets9.lottiefiles.com/datafiles/gUENLc1262ccKIO/data.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
-
+                    section#social_icons.mt-2
+                        a(href="https://github.com/Silent-Watcher/todoApp" target='_blank').fs-1
+                            i.fa-brands.fa-github
+                .row
+                    section#heading_text.col-6.d-flex.flex-column.justify-content-center.align-items-center
+                        h1.user-select-none Welcome to
+                            span ToDo.js
+                        button.border-0.w-75.fw-bold.mt-5 let's start
+                    section#heading_pic.col-6.d-flex.justify-content-start.align-items-start
+                        lottie-player(src='https://assets9.lottiefiles.com/packages/lf20_yrb0rj1c.json' background='transparent' speed='1' style='width: 700px; height: 700px;' loop='' autoplay='')
     include include/_scripts
 

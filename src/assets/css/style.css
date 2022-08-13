@@ -1,1 +1,38 @@
-/*# sourceMappingURL=style.css.map */
+.light body {
+  background-color: #f5f5f5;
+}
+.light #intro_page #social_icons > a {
+  color: #3579aa;
+}
+.light #intro_page #social_icons > a:hover {
+  color: #196296;
+}
+.light #intro_page #heading_text {
+  color: #404040;
+}
+.light #intro_page #heading_text > h1 > span {
+  color: #3579aa;
+}
+.light #intro_page #heading_text > button {
+  background-color: #e2e2e2;
+}
+.light #intro_page #heading_text > button:hover {
+  background-color: #3579aa;
+  color: #f5f5f5;
+}
+
+#intro_page #heading_text {
+  text-align: center;
+}
+#intro_page #heading_text > h1 {
+  font-size: 4rem;
+}
+#intro_page #heading_text > button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: calc(1rem + 4px);
+  transition: 0.3s ease;
+}
+#intro_page #heading_text > button:hover {
+  letter-spacing: 1.2px;
+}/*# sourceMappingURL=style.css.map */

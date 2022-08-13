@@ -1,0 +1,42 @@
+$primaryColor : #404040;
+$secondaryColor : #3579aa;
+$btnSecondaryColor : #f5f5f5;
+$primaryBg : #f5f5f5;
+$waveColor : #3579aa;
+$primaryBtnBg: #e2e2e2;
+$secondaryBtnBg: #3579aa;
+$socialIconColor : #3579aa;
+$socialIconHover : #196296;
+.light {
+  body {
+    background-color: $primaryBg;
+  }
+  #intro_page {
+    #social_icons{
+        > a{
+            color: $socialIconColor;
+            &:hover{
+                color: $socialIconHover;
+            }
+        }
+    }
+    #heading_text {
+        color: $primaryColor;
+        > h1 {
+          > span {
+            color: $secondaryColor;
+          }
+        }
+        > button {
+          background-color: $primaryBtnBg;
+          &:hover{
+            background-color: $secondaryBtnBg;
+            color: $btnSecondaryColor;
+          }
+        }
+    }
+  }
+}
+.dark{
+
+}
