@@ -2,18 +2,35 @@ doctype html
 html(lang="en").light
     include include/_head
     include include/_body
-        .container-fluid 
-            .container#intro_page
+        .container-fluid.pages.position-relative
+            include components/_intro_page
+            .container#main_page.position-absolute.top-0.start-0.end-0.bottom-0(hidden)
+                .row.mt-5
+                    header#heading_section.col-12.d-flex.justify-content-center
+                        h1.user-select-none.text-dark Todo List App
+                        button.border-0.fs-4.bg-transparent 
+                            i.fa-solid.fa-moon
                 .row 
-                    section#social_icons.mt-2
-                        a(href="https://github.com/Silent-Watcher/todoApp" target='_blank').fs-1
-                            i.fa-brands.fa-github
-                .row
-                    section#heading_text.col-6.d-flex.flex-column.justify-content-center.align-items-center
-                        h1.user-select-none Welcome to
-                            span ToDo.js
-                        button.border-0.w-75.fw-bold.mt-5 let's start
-                    section#heading_pic.col-6.d-flex.justify-content-start.align-items-start
-                        lottie-player(src='https://assets9.lottiefiles.com/packages/lf20_yrb0rj1c.json' background='transparent' speed='1' style='width: 700px; height: 700px;' loop='' autoplay='')
+                    section#addTask_section 
+                        form(action="")
+                            .mb-3
+                                label.form-label(for='taskInput').fs-4 Add Item
+                                input#taskInput.form-control(type='text' placeholder='task content here ...' required autofocus).fs-5
+                .row.mt-2
+                    section#action_buttons 
+                        button#addTaskBtn.btn.btn-primary Add To List
+                        button#clearStorageBtn.btn.btn-danger Clear Todo List 
+                .row.mt-4 
+                    h3 Todo List 
+                    main#tasks_wrapper
+                        ul#tasks_list.mt-3.d-flex.flex-column.justify-content-center.align-items-center
+                            .noTaskSection.text-center
+                                p.fw-bold no task here !! 
+                                lottie-player(src='https://assets5.lottiefiles.com/packages/lf20_r1gncjwd.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
+                section#changeTaskContent.rounded.text-center.d-flex.flex-column.align-items-center.justify-content-center.mt-4
+                    button.btn-close(type='button' aria-label='Close').align-self-end.me-3
+                    p.fs-4 new content 
+                    input#newContent(placeholder='enter a new content...').border-0.p-2.w-75
+                    button#submit_new_content.mt-3.border-0.btn.btn-secondary change ! 
     include include/_scripts
 
