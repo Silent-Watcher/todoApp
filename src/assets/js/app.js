@@ -1,18 +1,21 @@
 'use strict';
 let $ = document;
-const startBtn = $.querySelector('#start_btn');
-const addTask = $.querySelector('#addTaskBtn');
-const clearTasks = $.querySelector('#clearStorageBtn');
-const taskList = $.querySelector('#tasks_list');
-const taskInput = $.querySelector('#taskInput');
-const changeContentWindow = $.querySelector('#changeTaskContent');
-const newContent = $.querySelector('#newContent');
+let _id = (id) => {
+  return $.querySelector('#' + id);
+};
+const startBtn =_id('start_btn');
+const addTask =_id('addTaskBtn');
+const clearTasks = _id('clearStorageBtn');
+const taskList = _id('tasks_list');
+const taskInput =_id('taskInput');
+const changeContentWindow = _id('changeTaskContent');
+const newContent = _id('newContent');
 const tasks = JSON.parse(localStorage.getItem('tasks')) ?? JSON.parse('[]');
 const noTaskSection = $.querySelector('.noTaskSection');
 // animate__zoomOut
 startBtn.addEventListener('click', function () {
-  $.querySelector('#intro_page').classList.add('animate__zoomOut');
-  $.querySelector('#main_page').hidden = false;
+  _id('intro_page').classList.add('animate__zoomOut');
+  _id('main_page').hidden = false;
   $.body.style.overflowY = 'auto';
 });
 // close change task content window
