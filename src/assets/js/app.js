@@ -69,45 +69,24 @@ function createTaskElement(content, status = 'UnCompleted') {
   taskTitle.classList.add('task_title');
   taskTitle.innerHTML = content;
   // buttons
-  //   change status btn
+  // change status btn
   let changeStatusBtn = $.createElement('input');
   changeStatusBtn.setAttribute('type', 'checkbox');
   changeStatusBtn.className = 'TaskStatus';
   changeStatusBtn.checked = status === 'completed' ? true : false;
-  changeStatusBtn.addEventListener('click', function () {
-    if (this.parentElement.classList.contains('completed')) {
-      this.checked = false;
-      this.parentElement.className = 'task_item';
-      updateLocalStorage(this.previousElementSibling.innerHTML, 'uncompleted');
-    } else {
-      this.checked = true;
-      this.parentElement.className = 'task_item completed';
-      updateLocalStorage(this.previousElementSibling.innerHTML, 'completed');
-    }
-  });
-  //   remove button
+  // remove button
   let removeTaskBtn = $.createElement('button');
   removeTaskBtn.classList.add('removeTask_btn');
   let removeIcon = $.createElement('i');
   removeIcon.className = 'fa-solid fa-trash';
   removeTaskBtn.append(removeIcon);
-  removeTaskBtn.addEventListener('click', function () {
-    if (confirm('Are you sure ? ')) {
-      this.parentElement.remove();
-      removeTask(this.parentElement.firstElementChild.innerHTML);
-      if (JSON.parse(localStorage.getItem('tasks')).length === 0) {
-        noTaskSection.hidden = false;
-      }
-    }
-  });
-  //   edit button
+  // edit button
   let editBtn = $.createElement('button');
   editBtn.classList.add('editTask_btn');
   let editIcon = $.createElement('i');
   editIcon.className = 'fa-solid fa-pen-to-square';
   editBtn.append(editIcon);
   editBtn.addEventListener('click', function () {
-    changeContentWindow.style.top = '0';
     changeContentWindow.lastElementChild.addEventListener('click', function () {
       changeContentWindow.style.top = '-300px';
       if (newContent.value.trim() !== '') {
@@ -162,4 +141,50 @@ function updateLocalStorageContent(taskContent, newContent) {
 clearTasks.addEventListener('click', () => {
   taskList.innerHTML = null;
   localStorage.clear();
+});
+// tasks btns functionality
+taskList.addEventListener('click', function (event) {
+  // remove tasks btns functionality
+  if (
+    event.target.tagName === 'I' &&
+    event.target.classList.contains('fa-trash')
+  ) {
+    if (confirm('Are you sure ? ')) {
+      event.target.parentElement.parentElement.remove();
+      removeTask(
+        event.target.parentElement.parentElement.firstElementChild.innerHTML
+      );
+      if (JSON.parse(localStorage.getItem('tasks')).length === 0) {
+        noTaskSection.hidden = false;
+      }
+    }
+  }
+  // change content btns functionality
+  if (
+    event.target.tagName === 'I' &&
+    event.target.classList.contains('fa-pen-to-square')
+  ) {
+    changeContentWindow.style.top = '0';
+  }
+  // change status btns functionality
+  if (
+    event.target.tagName === 'INPUT' &&
+    event.target.classList.contains('TaskStatus')
+  ) {
+    if (event.target.parentElement.classList.contains('completed')) {
+      event.target.checked = false;
+      event.target.parentElement.className = 'task_item';
+      updateLocalStorage(
+        event.target.previousElementSibling.innerHTML,
+        'uncompleted'
+      );
+    } else {
+      event.target.checked = true;
+      event.target.parentElement.className = 'task_item completed';
+      updateLocalStorage(
+        event.target.previousElementSibling.innerHTML,
+        'completed'
+      );
+    }
+  }
 });
