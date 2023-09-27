@@ -1,4 +1,4 @@
-![rock-paper-scissors](https://github.com/Silent-Watcher/rock-paper-scissors/blob/master/public/img/Screenshot%20(302).jpg)
+![todo app demo image](https://github.com/Silent-Watcher/todoApp/blob/master/public/img/todo%20app%20demo%20.png)
 
 # rock-paper-scissors 🕹
 
