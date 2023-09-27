@@ -1,0 +1,30 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"commonjs": true,
+		"es2021": true
+	},
+	"extends": [
+		"plugin:@cspell/recommended",
+		"eslint:recommended",
+		"plugin:node/recommended",
+		"prettier"
+	],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"allowImportExportEverywhere": true
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"semi": ["error", "always"],
+		"eqeqeq": "warn",
+		"camelcase": "error",
+		"strict": "off",
+		"prefer-const": "warn",
+		"no-console": "warn",
+		"prettier/prettier": "warn",
+		"sort-vars": "off"
+	}
+}

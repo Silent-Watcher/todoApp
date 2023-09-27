@@ -1,0 +1,10 @@
+ul,
+ol {
+	> li {
+		list-style: none;
+	}
+}
+
+body {
+	overflow: hidden;
+}

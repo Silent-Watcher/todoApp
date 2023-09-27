@@ -1,0 +1,4 @@
+node_modules/*.scss
+docs
+.github
+_color.scss

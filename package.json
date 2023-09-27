@@ -1,0 +1,47 @@
+{
+	"name": "new-rock",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "npx eslint .",
+		"lint:fix": "npx eslint --fix .",
+		"prettier": "npx prettier --write .",
+		"prettier:check": "npx prettier --check .",
+		"lint:language": "npx alex ./*.*",
+		"prepare": "husky install",
+		"css:lint": "npx stylelint ./src/sass/*.scss",
+		"css:fix": "npx stylelint --fix ./src/sass/*.scss"
+	},
+	"devDependencies": {
+		"@cspell/eslint-plugin": "^7.3.6",
+		"alex": "^11.0.1",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.49.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-node": "^4.1.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^14.0.1",
+		"prettier": "3.0.3",
+		"sass": "^1.68.0",
+		"stylelint": "^15.10.3",
+		"stylelint-config-standard-scss": "^11.0.0",
+		"vite": "^4.4.5"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"dependencies": {
+		"party-js": "^2.2.0",
+		"sweetalert2": "^11.7.31"
+	}
+}
