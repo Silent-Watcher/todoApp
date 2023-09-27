@@ -41,7 +41,5 @@
 		}
 	},
 	"dependencies": {
-		"party-js": "^2.2.0",
-		"sweetalert2": "^11.7.31"
 	}
 }
