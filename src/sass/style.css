@@ -1,0 +1,132 @@
+ul > li,
+ol > li {
+  list-style: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.light body {
+  background-color: #f5f5f5;
+}
+.light #intro_page #social_icons > a {
+  color: #3579aa;
+}
+.light #intro_page #social_icons > a:hover {
+  color: #196296;
+}
+.light #intro_page #heading_text {
+  color: #404040;
+}
+.light #intro_page #heading_text > h1 > span {
+  color: #3579aa;
+}
+.light #intro_page #heading_text > button {
+  background-color: #e2e2e2;
+}
+.light #intro_page #heading_text > button:hover {
+  background-color: #3579aa;
+  color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  #intro_page {
+    height: 100vh !important;
+  }
+  #intro_page .intro {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #intro_page .intro section {
+    height: 45vh !important;
+    width: 85vw !important;
+  }
+  #intro_page lottie-player {
+    height: 100% !important;
+  }
+}
+#intro_page #heading_text {
+  text-align: center;
+}
+#intro_page #heading_text > h1 {
+  font-size: 4rem;
+}
+#intro_page #heading_text > button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: calc(1rem + 4px);
+  transition: 0.3s ease;
+}
+#intro_page #heading_text > button:hover {
+  letter-spacing: 1.2px;
+}
+
+#main_page #heading_section > h1 {
+  flex-grow: 2;
+  text-align: center;
+}
+#main_page #heading_section > button {
+  color: #3579aa;
+}
+#main_page #tasks_wrapper {
+  padding: 0 1rem !important;
+}
+#main_page #tasks_wrapper #tasks_list {
+  padding: 1rem !important;
+}
+#main_page #tasks_wrapper #tasks_list .task_item {
+  margin-top: 10px;
+  background-color: #eaeaea;
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+}
+#main_page #tasks_wrapper #tasks_list .task_item .task_title {
+  flex-grow: 3;
+  font-size: 20px;
+}
+#main_page #tasks_wrapper #tasks_list .task_item.completed .task_title {
+  text-decoration: line-through;
+  color: #ccc;
+}
+#main_page #tasks_wrapper #tasks_list .task_item .TaskStatus {
+  cursor: pointer;
+  accent-color: #3579aa;
+  font-size: 20px;
+}
+#main_page #tasks_wrapper #tasks_list .task_item > button {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+#main_page #tasks_wrapper #tasks_list .task_item .removeTask_btn {
+  color: crimson;
+  margin: 0 10px;
+}
+#main_page #tasks_wrapper #tasks_list .task_item .removeTask_btn:hover {
+  color: #c41034;
+}
+
+#changeTaskContent {
+  width: 400px;
+  height: 200px;
+  background-color: #ccc;
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+#changeTaskContent > input {
+  outline: 0;
+}
+
+@media (max-width: 768px) {
+  .form-control {
+    width: 95% !important;
+  }
+}/*# sourceMappingURL=style.css.map */

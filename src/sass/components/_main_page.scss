@@ -11,7 +11,11 @@
 	}
 
 	#tasks_wrapper {
+		padding: 0 1rem !important;
+
 		#tasks_list {
+			padding: 1rem !important;
+
 			.task_item {
 				margin-top: 10px;
 				background-color: #eaeaea;
@@ -70,5 +74,11 @@
 
 	> input {
 		outline: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.form-control {
+		width: 95% !important;
 	}
 }
