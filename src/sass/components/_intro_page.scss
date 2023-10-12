@@ -1,4 +1,23 @@
 #intro_page {
+	@media (max-width: 768px) {
+		height: 100vh !important;
+
+		.intro {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			& section {
+				height: 45vh !important;
+				width: 85vw !important;
+			}
+		}
+
+		lottie-player {
+			height: 100% !important;
+		}
+	}
+
 	#heading_text {
 		text-align: center;
 		> h1 {
