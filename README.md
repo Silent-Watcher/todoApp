@@ -23,9 +23,9 @@ The "todo js" is an open-source task management application available on GitHub.
 
 ## Demo
 
-Experience the power of the rock-paper-scissors by visiting the demo page.
+Experience the power of the "todo js" by visiting the demo page.
 
-You can try out the game by following this [demo link.](https://silent-watcher.github.io/todoApp/)
+You can try out the APP by following this [demo link.](https://silent-watcher.github.io/todoApp/)
 
 ## Features
 
